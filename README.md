@@ -1,4 +1,5 @@
 ## Jhonatan William Voltolini
+## Lucas Geovane Jandrey
 
 # Descrição da Atividade:
 
