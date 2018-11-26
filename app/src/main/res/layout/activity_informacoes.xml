@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:padding="7dp"
+        tools:context=".activitys.InformacoesActivity">
+
+        <TextView
+            android:id="@+id/trab_txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/trab_txtTitulo"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/trab_icone01"
+            android:layout_below="@+id/trab_txtTitulo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtTitulo"
+            android:layout_toRightOf="@+id/trab_icone01"
+            android:text="@string/trab_txtItem01"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trab_icone02"
+            android:layout_below="@+id/trab_txtItem01"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtItem01"
+            android:layout_toRightOf="@+id/trab_icone02"
+            android:text="@string/trab_txtItem02"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trab_icone03"
+            android:layout_below="@+id/trab_txtItem02"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtItem02"
+            android:layout_toRightOf="@+id/trab_icone03"
+            android:text="@string/trab_txtItem03"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trab_icone04"
+            android:layout_below="@+id/trab_txtItem03"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtItem03"
+            android:layout_toRightOf="@+id/trab_icone04"
+            android:text="@string/trab_txtItem04"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trab_icone05"
+            android:layout_below="@+id/trab_txtItem04"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtItem04"
+            android:layout_toRightOf="@+id/trab_icone05"
+            android:text="@string/trab_txtItem05"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trab_icone06"
+            android:layout_below="@+id/trab_txtItem05"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/icone_ok" />
+
+        <TextView
+            android:id="@+id/trab_txtItem06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_txtItem05"
+            android:layout_toRightOf="@+id/trab_icone06"
+            android:text="@string/trab_txtItem06"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/trab_btnFechar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trab_icone06"
+            android:layout_marginTop="10dp"
+            android:text="@string/trab_btnFechar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/botao_arredondado"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
+</ScrollView>

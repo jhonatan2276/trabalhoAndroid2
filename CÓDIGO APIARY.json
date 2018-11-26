@@ -1,0 +1,115 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# TrabalhoAndroid
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/usuario]
+
+### List All Questions [POST]
+
++ Request (application/json)
+
+        {
+            "nome": "admin",
+            "senha": "admin"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "nome1": "Jhonatan William Voltolini",
+                "nome2": "Lucas Geovane Jandrey"
+            }
+            
+## Questions Collection [/carro]
+
+### List All Questions [POST]
+
++ Request (application/json)
+
+        {
+            "parametro": "todos"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    "id": 1,
+                    "marca": "Honda",
+                    "modelo": "HR-V",
+                    "ano": "2016",
+                    "imagem": "https://abrilquatrorodas.files.wordpress.com/2018/01/vezel_new_mainimage-e1516975052492.jpg?quality=70&strip=info",
+                    "preco": "R$ 87.000,00",
+                    "observacoes": " - Veículo Completo \n - IPVA 2018 Grátis"
+                },
+                {
+                    "id": 2,
+                    "marca": "Toyota",
+                    "modelo": "Hilux",
+                    "ano": "2006",
+                    "imagem": "https://s.productreview.com.au/products/images/t/500/187775_555d57cc0e7a9835692522.jpeg",
+                    "preco": "R$ 70.000,00",
+                    "observacoes": " - Carro em bom estado \n - Aceita Troca"
+                },
+                {
+                    "id": 3,
+                    "marca": "Ford",
+                    "modelo": "Ranger",
+                    "ano": "2015",
+                    "imagem": "http://www.automotores-rev.com/wp-content/uploads/2016/04/2017-Ford-Ranger-Blue-Colors-660x330.jpg?x91625",
+                    "preco": "R$ 96.000,00",
+                    "observacoes": " - Único dono \n - Tração 4 x 4 \n - Modelo Completo"
+                },
+                {
+                    "id": 4,
+                    "marca": "Volkswagen",
+                    "modelo": "Golf",
+                    "ano": "2017",
+                    "imagem": "https://picolio.auto123.com/17photo/volkswagen/2017-volkswagen-golf_2.png",
+                    "preco": "R$ 110.000,00",
+                    "observacoes": " - 7.000 KM \n \n - Motor 2.0 \n - Câmbio Automático"
+                },
+                {
+                    "id": 5,
+                    "marca": "Chevrolet",
+                    "modelo": "Onix",
+                    "ano": "2018",
+                    "imagem": "https://www.chevroletnova.com.br/Upload/441x252_Familia0km_16112017092353.png",
+                    "preco": "R$ 65.000,00",
+                    "observacoes": " - Veículo 0 KM \n \n - Versão LTZ \n - Garantia de Fábrica por 3 anos"
+                },
+                {
+                    "id": 6,
+                    "marca": "Chevrolet",
+                    "modelo": "S10",
+                    "ano": "2009",
+                    "imagem": "https://http2.mlstatic.com/jg-faixas-s10-2009-2010-2011-flex-power-executive-cabdupla-D_NQ_NP_177311-MLB20539656978_012016-F.webp",
+                    "preco": "R$ 68.000,00",
+                    "observacoes": " - Turbo Diesel \n - Tração 4 x 4 \n - Bancos em Couro"
+                },
+                {
+                    "id": 7,
+                    "marca": "Renault",
+                    "modelo": "Duster",
+                    "ano": "2017",
+                    "imagem": "http://revistacarro.com.br/static/images/uploads/jrjrjrjrtjrjryyjrjry_300x162.jpg",
+                    "preco": "R$ 60.000,00",
+                    "observacoes": " - Veículo Completo \n - Único Dono \n - Todas as revisões em concessionária \n - Ainda na garantia de Fábrica"
+                },
+                {
+                    "id": 8,
+                    "marca": "Fiat",
+                    "modelo": "Uno",
+                    "ano": "2014",
+                    "imagem": "http://2.bp.blogspot.com/-4LAkjydw6C4/UV-RHcz6zPI/AAAAAAAAJbc/gerDB8Uw_CM/s1600/Sporting_001.jpg",
+                    "preco": "R$ 30.000,00",
+                    "observacoes": " - Freios ABS \n - Baixa quilometragem (47.000 KM)"
+                }
+            ]

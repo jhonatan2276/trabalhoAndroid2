@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10dp"
+        tools:context=".activitys.CarroDetalheActivity">
+
+        <ImageView
+            android:id="@+id/det_imagemIcone"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="25dp"
+            android:src="@drawable/icone_carro"
+            android:background="@drawable/borda_detalhe_imagem" />
+
+        <TextView
+            android:id="@+id/det_txtMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/det_imagemIcone"
+            tools:text="Marca"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/det_txtModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/det_txtMarca"
+            android:layout_toRightOf="@id/det_imagemIcone"
+            tools:text="Modelo"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/det_txtAno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/det_txtModelo"
+            android:layout_toRightOf="@id/det_imagemIcone"
+            tools:text="Ano"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/det_txtPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/det_txtAno"
+            android:layout_toRightOf="@id/det_imagemIcone"
+            tools:text="Preço"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/det_txtObservacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/det_imagemIcone"
+            android:text="@string/det_observacoes"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/det_btnAddFavoritos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:layout_alignRight="@+id/det_txtObservacoes"
+            android:layout_above="@+id/det_txtObservacoesDetalhe"
+            android:text="@string/det_btnAddFavoritos"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/botao_arredondado" />
+
+        <TextView
+            android:id="@+id/det_txtObservacoesDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borda_lista"
+            android:layout_below="@id/det_txtObservacoes"
+            tools:text="Detalhes"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/det_btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/det_txtObservacoesDetalhe"
+            android:layout_marginTop="10dp"
+            android:text="@string/det_btnVoltar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/botao_arredondado"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
+</ScrollView>

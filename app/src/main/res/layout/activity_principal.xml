@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context="br.edu.unidavi.trabalhoandroid.activitys.PrincipalActivity">
+
+    <TextView
+        android:id="@+id/prp_txtUsuario1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/prp_txtUsuario1" />
+
+    <TextView
+        android:id="@+id/prp_txtUsuario2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prp_txtUsuario1"
+        android:layout_marginTop="2dp"
+        android:text="@string/prp_txtUsuario2" />
+
+    <Button
+        android:id="@+id/prp_btnAddFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/prp_txtUsuario1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="62dp"
+        android:background="@drawable/botao_arredondado"
+        android:minHeight="0dp"
+        android:text="Favoritos"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <ImageButton
+        android:id="@+id/prp_btnAtualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icone_btn_atualizar"
+        android:background="@drawable/botao_arredondado" />
+
+    <TextView
+        android:id="@+id/prp_txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prp_txtUsuario2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/prp_txtTitulo"
+        android:textSize="15dp"
+        android:textStyle="bold|italic"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/prp_recyclerCarros"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/prp_txtTitulo"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/prp_telaPadrao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/prp_txtPadrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            tools:text="Nenhum Registro Encontrado"
+            android:text="@string/prp_txtPadrao"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

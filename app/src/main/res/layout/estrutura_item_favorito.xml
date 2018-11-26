@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/borda_favorito"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/itemFav_imagemIcone"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/icone_carro" />
+
+    <TextView
+        android:id="@+id/itemFav_txtMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/itemFav_imagemIcone"
+        tools:text="Marca"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/itemFav_iconeDeleta"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/itemFav_txtModelo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-11dp"
+        android:src="@drawable/icone_deleta" />
+
+    <TextView
+        android:id="@+id/itemFav_txtModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemFav_txtMarca"
+        android:layout_toRightOf="@id/itemFav_imagemIcone"
+        tools:text="Modelo"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/itemFav_txtAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemFav_txtModelo"
+        android:layout_toRightOf="@id/itemFav_imagemIcone"
+        tools:text="Ano"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/itemFav_txtPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/itemFav_txtAno"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="83dp"
+        android:textColor="@color/red"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:text="Preço" />
+</RelativeLayout>

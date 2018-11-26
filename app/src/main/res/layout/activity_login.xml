@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="br.edu.unidavi.trabalhoandroid.activitys.LoginActivity">
+
+        <RelativeLayout
+            android:id="@+id/log_lay01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:padding="7dp"
+            android:background="@drawable/borda_login">
+
+            <ImageView
+                android:id="@+id/log_imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:scaleType="center"
+                android:src="@drawable/logo"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/log_txtUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_imgLogo"
+                android:layout_marginTop="2dp"
+                android:text="@string/log_txtUsuario" />
+
+            <EditText
+                android:id="@+id/log_edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_txtUsuario"
+                android:layout_marginTop="2dp"
+                android:inputType="textEmailAddress"
+                android:hint="@string/log_edtNome" />
+
+            <TextView
+                android:id="@+id/log_txtSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_edtNome"
+                android:layout_marginTop="6dp"
+                android:text="@string/log_txtSenha" />
+
+            <EditText
+                android:id="@+id/log_edtSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_txtSenha"
+                android:layout_marginTop="2dp"
+                android:inputType="numberPassword"
+                android:hint="@string/log_edtSenha" />
+
+            <Switch
+                android:id="@+id/log_swtMemorizaUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_swtMemorizaUsuario"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_below="@id/log_edtSenha"
+                android:layout_marginTop="8dp"
+                android:checked="true" />
+
+            <Button
+                android:id="@+id/log_btnEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_swtMemorizaUsuario"
+                android:text="@string/log_btnEntrar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/botao_arredondado"
+                android:layout_marginTop="8dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/log_lay02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log_lay01"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="7dp"
+            android:background="@drawable/borda_login">
+
+            <TextView
+                android:id="@+id/log_txtSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/log_txtSobre"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/log_txtSobreNome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_txtSobre"
+                android:layout_marginTop="2dp"
+                android:text="@string/log_txtSobreNome1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/log_txtSobreNome2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_txtSobreNome1"
+                android:layout_marginTop="2dp"
+                android:text="@string/log_txtSobreNome2"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/log_btnInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_txtSobreNome2"
+                android:text="@string/log_btnInfo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/botao_arredondado"
+                android:layout_marginTop="8dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

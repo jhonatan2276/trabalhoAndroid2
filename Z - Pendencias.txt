@@ -1,0 +1,4 @@
+Adcionar campo Observações no SQLite;
+Criar Latitude e Longitude no Apiary;
+Preparar o projeto para receber os campos Latitude e Longitude;
+Atualizar Lista de Favoritos ao Deletar

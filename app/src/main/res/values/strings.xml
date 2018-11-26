@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Trabalho Android</string>
+
+    <!-- Tela de Login -->
+    <string name="log_btnEntrar">Entrar</string>
+    <string name="log_swtMemorizaUsuario">Memorizar Usuário</string>
+    <string name="log_txtUsuario">Usuário:</string>
+    <string name="log_txtSenha">Senha:</string>
+    <string name="log_txtSobre">Sobre:</string>
+    <string name="log_txtSobreNome1">Jhonatan William Voltolini</string>
+    <string name="log_txtSobreNome2">Lucas Geovane Jandrey</string>
+    <string name="log_btnInfo">Detalhes do Trabalho</string>
+    <string name="log_edtNome">Usuário</string>
+    <string name="log_edtSenha">Senha</string>
+
+    <!-- Tela Principal -->
+    <string name="prp_txtUsuario1">USUÁRIO 1</string>
+    <string name="prp_txtUsuario2">USUÁRIO 2</string>
+    <string name="prp_txtPadrao">Nenhum Registro Encontrado</string>
+    <string name="prp_txtTitulo">Lista de Carros Cadastrados</string>
+
+    <!-- Tela Detalhe Carro -->
+    <string name="det_btnVoltar">Voltar</string>
+    <string name="det_observacoes">Observações:</string>
+    <string name="det_btnAddFavoritos">Add aos Favoritos</string>
+
+    <!-- Tela Informações -->
+    <string name="trab_txtTitulo">Itens do Trabalho</string>
+    <string name="trab_txtItem01">3 Telas</string>
+    <string name="trab_txtItem02">Uso SQLite</string>
+    <string name="trab_txtItem03">Acesso à Internet</string>
+    <string name="trab_txtItem04">Permissão "Perigosa"</string>
+    <string name="trab_txtItem05">Uso de Maps</string>
+    <string name="trab_txtItem06">Uso de Listas (RecyclerView)</string>
+    <string name="trab_btnFechar">Fechar</string>
+
+    <!-- Gerenciador Web -->
+    <string name="error_connection">Sem Acesso à Internet</string>
+    <string name="error_request">Você não tem permissão para acessar este serviço</string>
+    <string name="msg_erro_resposta_invalida">Reposta do Servidor Inválida</string>
+</resources>
