@@ -18,11 +18,13 @@
     <string name="prp_txtUsuario2">USUÁRIO 2</string>
     <string name="prp_txtPadrao">Nenhum Registro Encontrado</string>
     <string name="prp_txtTitulo">Lista de Carros Cadastrados</string>
+    <string name="prp_btnFavoritos">Favoritos</string>
 
     <!-- Tela Detalhe Carro -->
     <string name="det_btnVoltar">Voltar</string>
-    <string name="det_observacoes">Observações:</string>
     <string name="det_btnAddFavoritos">Add aos Favoritos</string>
+    <string name="det_observacoes">Observações:</string>
+    <string name="det_localizacao">Localização do Veículo:</string>
 
     <!-- Tela Informações -->
     <string name="trab_txtTitulo">Itens do Trabalho</string>
@@ -38,4 +40,9 @@
     <string name="error_connection">Sem Acesso à Internet</string>
     <string name="error_request">Você não tem permissão para acessar este serviço</string>
     <string name="msg_erro_resposta_invalida">Reposta do Servidor Inválida</string>
+    <string name="fav_txtTitulo">Lista de Favoritos</string>
+    <string name="fav_txtPadrao">Nenhuma Favorito Cadastrado</string>
+
+    <!-- Tela Favoritos -->
+
 </resources>

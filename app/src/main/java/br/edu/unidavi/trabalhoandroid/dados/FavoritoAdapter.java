@@ -26,9 +26,6 @@ public class FavoritoAdapter extends RecyclerView.Adapter<EstruturaItemFavorito>
     private Context context;
     private LocalDatabaseController db;
 
-    private FavoritoAdapter teste;
-    private ArrayList<Favorito> testeArrayList;
-
     public FavoritoAdapter(List<Favorito> favoritoLista, Context context) {
         this.favoritoLista = favoritoLista;
         this.context = context;
@@ -62,6 +59,9 @@ public class FavoritoAdapter extends RecyclerView.Adapter<EstruturaItemFavorito>
             public void onClick(View view) {
                 db = new LocalDatabaseController(context);
                 db.deletaFavorito(favorito);
+
+                List<Favorito> novosFavoritos = db.buscaFavoritos();
+                deletaItemLista(novosFavoritos);
             }
         });
 
@@ -91,5 +91,11 @@ public class FavoritoAdapter extends RecyclerView.Adapter<EstruturaItemFavorito>
     @Override
     public int getItemCount() {
         return favoritoLista.size();
+    }
+
+    public void deletaItemLista(List<Favorito> favoritos) {
+        this.favoritoLista.clear();
+        this.favoritoLista.addAll(favoritos);
+        notifyDataSetChanged();
     }
 }

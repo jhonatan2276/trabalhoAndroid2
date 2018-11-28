@@ -32,7 +32,7 @@
         android:layout_marginEnd="62dp"
         android:background="@drawable/botao_arredondado"
         android:minHeight="0dp"
-        android:text="Favoritos"
+        android:text="@string/prp_btnFavoritos"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

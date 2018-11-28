@@ -95,12 +95,22 @@
             android:layout_marginTop="10dp"
             android:padding="8dp" />
 
+        <TextView
+            android:id="@+id/det_txtLocalizao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/det_txtObservacoesDetalhe"
+            android:text="@string/det_localizacao"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="357dp"
             android:layout_height="205dp"
-            android:layout_below="@+id/det_txtObservacoesDetalhe"
+            android:layout_below="@+id/det_txtLocalizao"
             android:layout_alignStart="@+id/det_txtObservacoes"
             android:layout_marginStart="4dp"
             android:layout_marginTop="9dp"

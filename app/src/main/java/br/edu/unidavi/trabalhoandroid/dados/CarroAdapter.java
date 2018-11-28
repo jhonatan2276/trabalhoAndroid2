@@ -46,7 +46,7 @@ public class CarroAdapter extends RecyclerView.Adapter<EstruturaItemLista> {
 
         db = new LocalDatabaseController(context);
 
-        favoritoArrayList = db.getAllFavs();
+        favoritoArrayList = db.buscaFavoritos();
 
         estruturaItemLista.marca.setText(carro.getMarca());
         estruturaItemLista.modelo.setText(carro.getModelo());

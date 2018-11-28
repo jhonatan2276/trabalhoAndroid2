@@ -64,7 +64,7 @@ public class CarroDetalheActivity extends AppCompatActivity implements OnMapRead
     private GoogleMap mMap;
     private boolean enableMyLocation = false;
 
-    private LatLng locCarro = new LatLng(-27.2104016, -49.6466032);
+    private LatLng locCarro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +95,7 @@ public class CarroDetalheActivity extends AppCompatActivity implements OnMapRead
         });
 
         //Busca todos os favoritos no SQLite cada vez que a tela é aberta
-        favoritoArrayList = db.getAllFavs();
+        favoritoArrayList = db.buscaFavoritos();
 
         addFavoritos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,40 +160,31 @@ public class CarroDetalheActivity extends AppCompatActivity implements OnMapRead
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(
-                this, R.raw.mapstyle
-        ));
+        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyle));
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(enableMyLocation);
         mMap.setMyLocationEnabled(enableMyLocation);
 
         MarkerOptions marker = new MarkerOptions()
-                .draggable(true)
+                .draggable(false)
                 .position(locCarro)
-                .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
-                .title("Remover");
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                .title("Marcador");
         markers.add(mMap.addMarker(marker));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                locCarro, 17f));
-
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(locCarro, 15f));
 
         mMap.addMarker(new MarkerOptions()
                 .draggable(true)
-                .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.ic_buiding))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_buiding))
                 .position(locCarro));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             enableMyLocation = true;
         } else {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                Toast.makeText(this, "Por favor, sua localização é necessária",
-                        Toast.LENGTH_SHORT).show();
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                Toast.makeText(this, "Por favor, sua localização é necessária", Toast.LENGTH_SHORT).show();
             }
-
             ActivityCompat.requestPermissions(this, new String[] {
                     Manifest.permission.ACCESS_FINE_LOCATION
             }, 100);

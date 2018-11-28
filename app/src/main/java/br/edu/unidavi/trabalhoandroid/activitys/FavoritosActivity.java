@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;;
 
@@ -31,10 +32,12 @@ public class FavoritosActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         db = new LocalDatabaseController(this);
-        favoritoArrayList = db.getAllFavs();
+        favoritoArrayList = db.buscaFavoritos();
 
         favoritoAdapter = new FavoritoAdapter(favoritoArrayList, this);
         recyclerView.setAdapter(favoritoAdapter);
+
+        checaListaVazia(favoritoAdapter);
     }
 
     @Override
@@ -42,5 +45,17 @@ public class FavoritosActivity extends AppCompatActivity {
         super.onResume();
 
         montaLista();
+    }
+
+    public void checaListaVazia(FavoritoAdapter favoritoAdapter) {
+        if (favoritoAdapter.getItemCount() > 0) {
+            findViewById(R.id.fav_telaPadrao).setVisibility(View.GONE);
+            findViewById(R.id.fav_txtTitulo).setVisibility(View.VISIBLE);
+            findViewById(R.id.fav_recyclerFavoritos).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.fav_telaPadrao).setVisibility(View.VISIBLE);
+            findViewById(R.id.fav_txtTitulo).setVisibility(View.GONE);
+            findViewById(R.id.fav_recyclerFavoritos).setVisibility(View.GONE);
+        }
     }
 }

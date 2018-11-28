@@ -47,7 +47,7 @@ public class LocalDatabaseController extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public ArrayList<Favorito> getAllFavs () {
+    public ArrayList<Favorito> buscaFavoritos () {
         String[] colunas = {"_id", "idServer", "marca", "modelo", "ano", "imagem", "preco", "observacoes", "latitude", "longitude"};
 
         Cursor cursor = getWritableDatabase().query("favoritos", colunas, null, null, null, null, null, null);

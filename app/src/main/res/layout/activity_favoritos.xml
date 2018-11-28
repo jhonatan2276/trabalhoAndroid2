@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,40 @@
     android:padding="10dp"
     tools:context=".activitys.FavoritosActivity">
 
+    <TextView
+        android:id="@+id/fav_txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/fav_txtTitulo"
+        android:textSize="15dp"
+        android:textStyle="bold|italic"
+        android:layout_centerHorizontal="true" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/fav_recyclerFavoritos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
-        android:layout_below="@+id/prp_txtTitulo"
+        android:layout_below="@+id/fav_txtTitulo"
         android:visibility="visible" />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/fav_telaPadrao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fav_txtPadrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            tools:text="Nenhum Registro Encontrado"
+            android:text="@string/fav_txtPadrao"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>
