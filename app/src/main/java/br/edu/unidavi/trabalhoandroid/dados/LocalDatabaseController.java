@@ -17,7 +17,7 @@ import br.edu.unidavi.trabalhoandroid.eventbus.Favorito;
 public class LocalDatabaseController extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "Favorito.db";
-    private static final int DB_VERSION = 5;
+    private static final int DB_VERSION = 14;
 
     public String teste;
 
@@ -34,18 +34,21 @@ public class LocalDatabaseController extends SQLiteOpenHelper {
                 "modelo text," +
                 "ano text," +
                 "imagem text," +
-                "preco boolean" +
+                "preco text," +
+                "observacoes text," +
+                "latitude text," +
+                "longitude text" +
                 ")");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table carros");
+        db.execSQL("drop table favoritos");
         onCreate(db);
     }
 
     public ArrayList<Favorito> getAllFavs () {
-        String[] colunas = {"_id", "idServer", "marca", "modelo", "ano", "imagem", "preco"};
+        String[] colunas = {"_id", "idServer", "marca", "modelo", "ano", "imagem", "preco", "observacoes", "latitude", "longitude"};
 
         Cursor cursor = getWritableDatabase().query("favoritos", colunas, null, null, null, null, null, null);
 
@@ -60,6 +63,9 @@ public class LocalDatabaseController extends SQLiteOpenHelper {
             favorito.setAno(cursor.getString(4));
             favorito.setImagem(cursor.getString(5));
             favorito.setPreco(cursor.getString(6));
+            favorito.setObservacoes(cursor.getString(7));
+            favorito.setLatitude(cursor.getString(8));
+            favorito.setLongitude(cursor.getString(9));
 
             listFavorito.add(favorito);
         }
@@ -67,7 +73,7 @@ public class LocalDatabaseController extends SQLiteOpenHelper {
         return listFavorito;
     }
 
-    public void inserirFavorito(int idServer, String marca, String modelo, String ano, String imagem, String preco) {
+    public void inserirFavorito(int idServer, String marca, String modelo, String ano, String imagem, String preco, String observacoes, String latitude, String longitude) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("idServer", idServer);
@@ -76,6 +82,9 @@ public class LocalDatabaseController extends SQLiteOpenHelper {
         values.put("ano", ano);
         values.put("imagem", imagem);
         values.put("preco", preco);
+        values.put("observacoes", observacoes);
+        values.put("latitude", latitude);
+        values.put("longitude", longitude);
         db.insert("favoritos", null, values);
     }
 

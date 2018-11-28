@@ -79,6 +79,8 @@ public class CarroAdapter extends RecyclerView.Adapter<EstruturaItemLista> {
                 carroDet.setPreco(carro.getPreco());
                 carroDet.setObservacoes(carro.getObservacoes());
                 carroDet.setImagem(carro.getImagem());
+                carroDet.setLatitude(carro.getLatitude());
+                carroDet.setLongitude(carro.getLongitude());
                 EventBus.getDefault().postSticky(carroDet);
 
                 final Intent carroDetalhe;

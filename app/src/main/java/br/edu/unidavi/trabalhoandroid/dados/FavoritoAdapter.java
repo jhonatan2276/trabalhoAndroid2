@@ -75,8 +75,10 @@ public class FavoritoAdapter extends RecyclerView.Adapter<EstruturaItemFavorito>
                 carroDet.setModelo(favorito.getModelo());
                 carroDet.setAno(favorito.getAno());
                 carroDet.setPreco(favorito.getPreco());
-                //carroDet.setObservacoes(favorito.getObservacoes());
                 carroDet.setImagem(favorito.getImagem());
+                carroDet.setObservacoes(favorito.getObservacoes());
+                carroDet.setLatitude(favorito.getLatitude());
+                carroDet.setLongitude(favorito.getLongitude());
                 EventBus.getDefault().postSticky(carroDet);
 
                 final Intent carroDetalhe;

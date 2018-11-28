@@ -53,6 +53,8 @@ public class GerenciadorWebCarros extends GerenciadorWeb {
                 carro.setPreco(responseAsJSON.getString("preco"));
                 carro.setObservacoes(responseAsJSON.getString("observacoes"));
                 carro.setImagem(responseAsJSON.getString("imagem"));
+                carro.setLatitude(responseAsJSON.getString("latitude"));
+                carro.setLongitude(responseAsJSON.getString("longitude"));
                 carroList.add(carro);
             }
 

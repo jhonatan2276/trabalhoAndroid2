@@ -9,6 +9,9 @@ public class Favorito {
     private String ano;
     private String imagem;
     private String preco;
+    private String observacoes;
+    private String latitude;
+    private String longitude;
 
     public Favorito() {}
 
@@ -45,8 +48,21 @@ public class Favorito {
     public String getImagem() {
         return imagem;
     }
+
     public String getPreco() {
         return preco;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
     }
 
     public void setId(int id) {
@@ -75,5 +91,17 @@ public class Favorito {
 
     public void setPreco(String preco) {
         this.preco = preco;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }
