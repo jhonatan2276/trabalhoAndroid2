@@ -22,7 +22,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
             {
                 "nome1": "Jhonatan William Voltolini",
-                "nome2": "Lucas Geovane Jandrey"
+                "nome2": "Lucas Geovane Jandrey",
+                "login": "admin",
+                "senha": "123456"
             }
             
 ## Questions Collection [/carro]
@@ -47,7 +49,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2016",
                     "imagem": "https://abrilquatrorodas.files.wordpress.com/2018/01/vezel_new_mainimage-e1516975052492.jpg?quality=70&strip=info",
                     "preco": "R$ 87.000,00",
-                    "observacoes": " - Veículo Completo \n - IPVA 2018 Grátis"
+                    "observacoes": " - Veículo Completo \n - IPVA 2018 Grátis",
+                    "latitude": "-27.2119294",
+                    "longitude": "-49.6380768"
                 },
                 {
                     "id": 2,
@@ -56,7 +60,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2006",
                     "imagem": "https://s.productreview.com.au/products/images/t/500/187775_555d57cc0e7a9835692522.jpeg",
                     "preco": "R$ 70.000,00",
-                    "observacoes": " - Carro em bom estado \n - Aceita Troca"
+                    "observacoes": " - Carro em bom estado \n - Aceita Troca",
+                    "latitude": "-27.2070456",
+                    "longitude": "-49.6511144"
                 },
                 {
                     "id": 3,
@@ -65,7 +71,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2015",
                     "imagem": "http://www.automotores-rev.com/wp-content/uploads/2016/04/2017-Ford-Ranger-Blue-Colors-660x330.jpg?x91625",
                     "preco": "R$ 96.000,00",
-                    "observacoes": " - Único dono \n - Tração 4 x 4 \n - Modelo Completo"
+                    "observacoes": " - Único dono \n - Tração 4 x 4 \n - Modelo Completo",
+                    "latitude": "-27.2168639",
+                    "longitude": "-49.6476509"
                 },
                 {
                     "id": 4,
@@ -74,7 +82,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2017",
                     "imagem": "https://picolio.auto123.com/17photo/volkswagen/2017-volkswagen-golf_2.png",
                     "preco": "R$ 110.000,00",
-                    "observacoes": " - 7.000 KM \n \n - Motor 2.0 \n - Câmbio Automático"
+                    "observacoes": " - 7.000 KM \n \n - Motor 2.0 \n - Câmbio Automático",
+                    "latitude": "-27.210101",
+                    "longitude": "-49.6340645"
                 },
                 {
                     "id": 5,
@@ -83,7 +93,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2018",
                     "imagem": "https://www.chevroletnova.com.br/Upload/441x252_Familia0km_16112017092353.png",
                     "preco": "R$ 65.000,00",
-                    "observacoes": " - Veículo 0 KM \n \n - Versão LTZ \n - Garantia de Fábrica por 3 anos"
+                    "observacoes": " - Veículo 0 KM \n \n - Versão LTZ \n - Garantia de Fábrica por 3 anos",
+                    "latitude": "-27.2104016",
+                    "longitude": "-49.6444145"
                 },
                 {
                     "id": 6,
@@ -92,7 +104,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2009",
                     "imagem": "https://http2.mlstatic.com/jg-faixas-s10-2009-2010-2011-flex-power-executive-cabdupla-D_NQ_NP_177311-MLB20539656978_012016-F.webp",
                     "preco": "R$ 68.000,00",
-                    "observacoes": " - Turbo Diesel \n - Tração 4 x 4 \n - Bancos em Couro"
+                    "observacoes": " - Turbo Diesel \n - Tração 4 x 4 \n - Bancos em Couro",
+                    "latitude": "-27.2037729",
+                    "longitude": "-49.6408364"
                 },
                 {
                     "id": 7,
@@ -101,7 +115,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2017",
                     "imagem": "http://revistacarro.com.br/static/images/uploads/jrjrjrjrtjrjryyjrjry_300x162.jpg",
                     "preco": "R$ 60.000,00",
-                    "observacoes": " - Veículo Completo \n - Único Dono \n - Todas as revisões em concessionária \n - Ainda na garantia de Fábrica"
+                    "observacoes": " - Veículo Completo \n - Único Dono \n - Todas as revisões em concessionária \n - Ainda na garantia de Fábrica",
+                    "latitude": "-27.1961793",
+                    "longitude": "-49.6306533"
                 },
                 {
                     "id": 8,
@@ -110,6 +126,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2014",
                     "imagem": "http://2.bp.blogspot.com/-4LAkjydw6C4/UV-RHcz6zPI/AAAAAAAAJbc/gerDB8Uw_CM/s1600/Sporting_001.jpg",
                     "preco": "R$ 30.000,00",
-                    "observacoes": " - Freios ABS \n - Baixa quilometragem (47.000 KM)"
+                    "observacoes": " - Freios ABS \n - Baixa quilometragem (47.000 KM)",
+                    "latitude": "-27.203278",
+                    "longitude": "-49.6335371"
                 }
             ]

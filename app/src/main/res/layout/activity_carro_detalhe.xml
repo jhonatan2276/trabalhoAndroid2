@@ -84,6 +84,7 @@
             android:textColor="@color/white"
             android:background="@drawable/botao_arredondado" />
 
+
         <TextView
             android:id="@+id/det_txtObservacoesDetalhe"
             android:layout_width="match_parent"

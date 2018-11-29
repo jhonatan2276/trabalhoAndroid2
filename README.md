@@ -16,3 +16,7 @@
 - EventBus
 - ViHtarb Tooltip
 - Apiary
+
+## Observações:
+- Fizemos um aplicativo que lista carros, onde o App se conecta ao servidor e este carrega uma lista de veículos com suas informações.
+- Utilizamos o Apiary para fazer a parte do servidor, funcionou tudo perfeitamente :)

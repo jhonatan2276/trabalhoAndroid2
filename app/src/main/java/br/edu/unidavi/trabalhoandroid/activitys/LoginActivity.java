@@ -1,6 +1,9 @@
 package br.edu.unidavi.trabalhoandroid.activitys;
 
+import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtSenha;
     private Switch swtMemorizaUsuario;
     private ProgressDialog msgCarregando;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
         if (edtSenha.getText().toString().trim().equals("")) {
             mostraTooltip(edtSenha, "Informe a Senha", "#FFFFFF", "#3F51B5");
         } else {
-
             nome = edtNome.getText().toString();
             senha = edtSenha.getText().toString();
 
@@ -76,6 +79,10 @@ public class LoginActivity extends AppCompatActivity {
 
             GerenciadorWebUsuario gerenciadorWebUsuario = new GerenciadorWebUsuario(this, nome, senha);
             gerenciadorWebUsuario.execute();
+
+
+
+
         }
     }
 
@@ -142,15 +149,38 @@ public class LoginActivity extends AppCompatActivity {
         Mensagem mensagem = new Mensagem();
         mensagem.setTexto01(usuario.getNome1());
         mensagem.setTexto02(usuario.getNome2());
+        mensagem.setTexto03(usuario.getUsuario());
+        mensagem.setTexto04(usuario.getSenha());
         EventBus.getDefault().postSticky(mensagem);
 
         fimCarregando();
 
-        Intent principal = new Intent(this, PrincipalActivity.class);
-        startActivity(principal);
-        finish();
+        //Este método de autenticação funciona com apenas UM usuário vindo do banco remoto.
+        if ((nome.equals(usuario.getUsuario())) && (senha.equals(usuario.getSenha()))) {
+            Intent principal = new Intent(this, PrincipalActivity.class);
+            startActivity(principal);
+            finish();
 
-        Log.d("EVENTO ======= ", "RECEBENDO USUÁRIO");
+            Log.d("EVENTO ======= ", "RECEBENDO USUÁRIO");
+        } else {
+            alerta();
+        }
+    }
+
+    private void alerta() {
+        new AlertDialog.Builder(this)
+                .setTitle("TESTE DE AULA - Usuário ou Senha Inválidos")
+                .setMessage("Usuário: admin - Senha: 123456\n\nPara fins de teste, é possivel acessar o App sem Login")
+                .setPositiveButton("Entra sem Login", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent principal = new Intent(getApplicationContext(), PrincipalActivity.class);
+                        startActivity(principal);
+                        finish();
+                    }
+                })
+                .setNegativeButton("ok", null)
+                .show();
     }
 
     @Subscribe
