@@ -79,10 +79,6 @@ public class LoginActivity extends AppCompatActivity {
 
             GerenciadorWebUsuario gerenciadorWebUsuario = new GerenciadorWebUsuario(this, nome, senha);
             gerenciadorWebUsuario.execute();
-
-
-
-
         }
     }
 
@@ -169,17 +165,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private void alerta() {
         new AlertDialog.Builder(this)
-                .setTitle("TESTE DE AULA - Usuário ou Senha Inválidos")
-                .setMessage("Usuário: admin - Senha: 123456\n\nPara fins de teste, é possivel acessar o App sem Login")
-                .setPositiveButton("Entra sem Login", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent principal = new Intent(getApplicationContext(), PrincipalActivity.class);
-                        startActivity(principal);
-                        finish();
-                    }
-                })
-                .setNegativeButton("ok", null)
+                .setTitle("Erro ao Efetuar Login")
+                .setMessage("Usuário ou Senha Inválidos")
+                .setPositiveButton("ok", null)
                 .show();
     }
 

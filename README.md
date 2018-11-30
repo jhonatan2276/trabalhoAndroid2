@@ -1,6 +1,10 @@
 ## Jhonatan William Voltolini
 ## Lucas Geovane Jandrey
 
+## Informações
+- Usuário: admin
+- Senha: 123456
+
 # Descrição da Atividade:
 
 ## Itens Obrigatórios:

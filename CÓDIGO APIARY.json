@@ -82,7 +82,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2017",
                     "imagem": "https://picolio.auto123.com/17photo/volkswagen/2017-volkswagen-golf_2.png",
                     "preco": "R$ 110.000,00",
-                    "observacoes": " - 7.000 KM \n \n - Motor 2.0 \n - Câmbio Automático",
+                    "observacoes": " - 7.000 KM \n - Motor 2.0 \n - Câmbio Automático",
                     "latitude": "-27.210101",
                     "longitude": "-49.6340645"
                 },
@@ -93,7 +93,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "ano": "2018",
                     "imagem": "https://www.chevroletnova.com.br/Upload/441x252_Familia0km_16112017092353.png",
                     "preco": "R$ 65.000,00",
-                    "observacoes": " - Veículo 0 KM \n \n - Versão LTZ \n - Garantia de Fábrica por 3 anos",
+                    "observacoes": " - Veículo 0 KM \n - Versão LTZ \n - Garantia de Fábrica por 3 anos",
                     "latitude": "-27.2104016",
                     "longitude": "-49.6444145"
                 },
